@@ -35,6 +35,6 @@ getSum x = helper x 0
 
 getCount x = helper x 1 
 	where
-  		helper x 	| x `div` 10 == 0 || (-x) `div` 10 == 0 = n
+  		helper x n	| x `div` 10 == 0 || (-x) `div` 10 == 0 = n
              			| x > 0 = helper (x `div` 10) (n + 1) 
              			| x < 0 = helper ((-x) `div` 10) (n + 1) 
